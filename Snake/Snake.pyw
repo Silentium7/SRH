@@ -107,7 +107,6 @@ while ouvert :
             
             for a in snake_pos:
                 if a == pomme :
-                    print("touché")
                     snake_pos.insert(0, [snake_pos[0][0], snake_pos[0][1]])
                     pomme = [random.randint(0, 24),random.randint(0, 24)]
 
