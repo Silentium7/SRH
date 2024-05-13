@@ -124,8 +124,13 @@ while running2 :
         best_score = 0
         with open("jeux/Crossyroad/data.txt", 'w') as fic :
             fic.write("0\n")
-    else :
-        best_score = int(data[0][0:-1])
+    elif len(data) == 1 :
+        with open("jeux/Crossyroad/data.txt", 'a') as fic :
+            fic.write("\n")
+
+    with open("jeux/Crossyroad/data.txt", 'r') as fic :
+        data = fic.readlines()
+    best_score = int(data[0][0:-1])
 
     running = True
 
@@ -182,6 +187,7 @@ while running2 :
             if score > int(best_score):
                 with open("jeux/Crossyroad/data.txt", 'w') as fic:
                     fic.write(str(score))
+                    fic.write("\n")
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
