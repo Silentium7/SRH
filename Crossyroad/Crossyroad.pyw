@@ -115,7 +115,7 @@ running2 = True
 home_screen = True
 while running2 :
     
-    best_score = "0"
+    best_score = 0
     with open("jeux/Crossyroad/data.txt", 'a') as fic : pass
     with open("jeux/Crossyroad/data.txt", 'r') as fic :
         data = fic.readlines()
@@ -141,7 +141,7 @@ while running2 :
         text_surface3 = my_font3.render("Synopsis :\n Vous êtes un poulet qui fuyez le kfc : courez le plus loin possible avant\nque le monsieur moustachu vous rattrape", False, (0, 0, 0))
         text_surface4 = my_font.render("ESPACE POUR COMMENCER !!!!!", False, (0, randint(0,255), 0))
         text_surface5 = my_font3.render("UTULISER les flèches pour vous déplacer", False, (0, 0, randint(0,255)))
-        chaine4 = "meilleur score : " + best_score
+        chaine4 = "meilleur score : " + str(best_score)
         text_surface6 = my_font3.render(chaine4, False, (0, randint(0, 255), randint(0,255)))
 
         
