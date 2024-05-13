@@ -116,8 +116,16 @@ home_screen = True
 while running2 :
     
     best_score = "0"
-    with open("data", 'r') as fic:
-        best_score = str(fic.readlines()[0])
+    with open("jeux/Crossyroad/data.txt", 'a') as fic : pass
+    with open("jeux/Crossyroad/data.txt", 'r') as fic :
+        data = fic.readlines()
+
+    if len(data) == 0 :
+        best_score = 0
+        with open("jeux/Crossyroad/data.txt", 'w') as fic :
+            fic.write("0\n")
+    else :
+        best_score = int(data[0][0:-1])
 
     running = True
 
@@ -172,7 +180,7 @@ while running2 :
             text_surface3 = my_font2.render(chaine3, False, (0, 0, 0))
             timer -=1
             if score > int(best_score):
-                with open("data", 'w') as fic:
+                with open("jeux/Crossyroad/data.txt", 'w') as fic:
                     fic.write(str(score))
 
         for event in pygame.event.get():
