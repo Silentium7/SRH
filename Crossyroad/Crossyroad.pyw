@@ -115,7 +115,7 @@ running2 = True
 home_screen = True
 while running2 :
     
-    best_score = "0"
+    best_score = 0
     with open("jeux/Crossyroad/data.txt", 'a') as fic : pass
     with open("jeux/Crossyroad/data.txt", 'r') as fic :
         data = fic.readlines()
