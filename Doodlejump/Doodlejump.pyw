@@ -15,7 +15,7 @@ pygame.font.init()
 
 font = pygame.font.SysFont('monospace', 50)
 font2 = pygame.font.SysFont('monospace', 25)
-title = text_surface = font.render('Doddle Jump', False, (0, 0, 50))
+title = text_surface = font.render('Doodle Jump', False, (0, 0, 50))
 
 screen = pygame.display.set_mode([500, 500])
 
@@ -36,13 +36,13 @@ encours = True
 
 while encours :
 
-    with open("jeux/Doddlejump/data.txt", 'a') as fic : pass
-    with open("jeux/Doddlejump/data.txt", 'r') as fic :
+    with open("jeux/Doodlejump/data.txt", 'a') as fic : pass
+    with open("jeux/Doodlejump/data.txt", 'r') as fic :
         data = fic.readlines()
     if len(data)==0 :
-        with open("jeux/Doddlejump/data.txt", 'w') as fic :
+        with open("jeux/Doodlejump/data.txt", 'w') as fic :
             fic.write("0\n")
-    with open("jeux/Doddlejump/data.txt", 'r') as fic :
+    with open("jeux/Doodlejump/data.txt", 'r') as fic :
         data = fic.readlines()
     best_score = data[0][0:-1]
 
@@ -81,7 +81,7 @@ while encours :
     t1 = font2.render(chaine, False, (0, 0, 50))
     screen.blit(t1, (120,410))
 
-    chaine = "Doddle Jump / FPS : "+str(int(clock.get_fps()))+" / Best score = "+best_score+" / Score = "+score_precedent
+    chaine = "Doodle Jump / FPS : "+str(int(clock.get_fps()))+" / Best score = "+best_score+" / Score = "+score_precedent
     pygame.display.set_caption(chaine)
     clock.tick(60)
     pygame.display.flip()
@@ -128,7 +128,7 @@ while encours :
 
         if score_precedent != "/" and int(score_precedent) > int(best_score) :
             best_score = score_precedent
-            with open("jeux/Doddlejump/data.txt", 'w') as fic:
+            with open("jeux/Doodlejump/data.txt", 'w') as fic:
                 chaine = str(score_precedent)+"\n"
                 fic.write(chaine)
 
@@ -138,7 +138,7 @@ while encours :
         pygame.draw.rect(screen, (100, 100, 255), [x_cube, y_cube, 20, 20])
         clock.tick(60)
         pygame.display.flip()
-        chaine = "Doddle Jump / FPS : "+str(int(clock.get_fps()))+" / Best score = "+best_score+" / Score = "+score_precedent
+        chaine = "Doodle Jump / FPS : "+str(int(clock.get_fps()))+" / Best score = "+best_score+" / Score = "+score_precedent
         pygame.display.set_caption(chaine)
 
 pygame.quit()
