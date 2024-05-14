@@ -1,3 +1,5 @@
+#1
+
 from os import mkdir, listdir, system, startfile, getcwd
 
 try : import pygame
