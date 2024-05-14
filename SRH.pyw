@@ -32,23 +32,23 @@ try :
         url_image = "https://raw.githubusercontent.com/Silentium7/SRH/main/"+data[i]+"/icon.jpg"
         fichiers = listdir()
         try : 
-            if not "jeux/"+data[i] in fichiers : mkdir("jeux/"+data[i])
+            if not "c:/Users/Public/SRH/jeux/"+data[i] in fichiers : mkdir("c:/Users/Public/SRH/jeux/"+data[i])
         except FileExistsError  :pass
-        fichiers = listdir("jeux/"+data[i])
+        fichiers = listdir("c:/Users/Public/SRH/jeux/"+data[i])
         if not "icon.jpg" in fichiers :
-            urllib.request.urlretrieve("https://raw.githubusercontent.com/Silentium7/SRH/main/"+data[i]+"/icon.jpg", "jeux/"+data[i]+"/icon.jpg")
+            urllib.request.urlretrieve("https://raw.githubusercontent.com/Silentium7/SRH/main/"+data[i]+"/icon.jpg", "c:/Users/Public/SRH/jeux/"+data[i]+"/icon.jpg")
         chaine = data[i]+".pyw"
         print("ok", chaine)
         if not chaine in fichiers :
             
-            urllib.request.urlretrieve("https://raw.githubusercontent.com/Silentium7/SRH/main/"+data[i]+"/"+chaine, "jeux/"+data[i]+"/"+chaine)
+            urllib.request.urlretrieve("https://raw.githubusercontent.com/Silentium7/SRH/main/"+data[i]+"/"+chaine, "c:/Users/Public/SRH/jeux/"+data[i]+"/"+chaine)
 
 except urllib.error.URLError : pass
 
 screen = pygame.display.set_mode([600, 600])
 pygame.display.set_caption("RAPHUB")
 
-Liste_jeux = listdir("jeux/")
+Liste_jeux = listdir("c:/Users/Public/SRH/jeux/")
 
 running = True
 while running:
