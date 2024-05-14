@@ -116,19 +116,19 @@ home_screen = True
 while running2 :
     
     best_score = 0
-    with open("jeux/Crossyroad/data.txt", 'a') as fic : pass
-    with open("jeux/Crossyroad/data.txt", 'r') as fic :
+    with open("c:/Users/Public/SRH/jeux/Crossyroad/data.txt", 'a') as fic : pass
+    with open("c:/Users/Public/SRH/jeux/Crossyroad/data.txt", 'r') as fic :
         data = fic.readlines()
 
     if len(data) == 0 :
         best_score = 0
-        with open("jeux/Crossyroad/data.txt", 'w') as fic :
+        with open("c:/Users/Public/SRH/jeux/Crossyroad/data.txt", 'w') as fic :
             fic.write("0\n")
     elif len(data) == 1 :
-        with open("jeux/Crossyroad/data.txt", 'a') as fic :
+        with open("c:/Users/Public/SRH/jeux/Crossyroad/data.txt", 'a') as fic :
             fic.write("\n")
 
-    with open("jeux/Crossyroad/data.txt", 'r') as fic :
+    with open("c:/Users/Public/SRH/jeux/Crossyroad/data.txt", 'r') as fic :
         data = fic.readlines()
     best_score = int(data[0][0:-1])
 
@@ -185,7 +185,7 @@ while running2 :
             text_surface3 = my_font2.render(chaine3, False, (0, 0, 0))
             timer -=1
             if score > int(best_score):
-                with open("jeux/Crossyroad/data.txt", 'w') as fic:
+                with open("c:/Users/Public/SRH/jeux/Crossyroad/data.txt", 'w') as fic:
                     fic.write(str(score))
                     fic.write("\n")
 
