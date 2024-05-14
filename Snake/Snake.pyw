@@ -24,13 +24,13 @@ while ouvert :
 
     # meilleur_score = data[0]
 
-    with open("jeux/Snake/data.txt", 'a') as fic : pass
-    with open("jeux/Snake/data.txt", 'r') as fic :
+    with open("c:/Users/Public/SRH/jeux/Snake/data.txt", 'a') as fic : pass
+    with open("c:/Users/Public/SRH/jeux/Snake/data.txt", 'r') as fic :
         data = fic.readlines()
 
     if len(data) == 0 :
         BS = 0
-        with open("jeux/Snake/data.txt", 'w') as fic :
+        with open("c:/Users/Public/SRH/jeux/Snake/data.txt", 'w') as fic :
             fic.write("0\n")
     else :
         BS = int(data[0][0:-1])
@@ -101,7 +101,7 @@ while ouvert :
 
             if len(snake_pos) > BS :
                 BS = len(snake_pos)
-                with open("jeux/Snake/data.txt", 'w') as fic :
+                with open("c:/Users/Public/SRH/jeux/Snake/data.txt", 'w') as fic :
                     chaine = str(BS)+"\n"
                     fic.write(chaine)
             
