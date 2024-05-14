@@ -1,4 +1,4 @@
-#4
+#5
 def srhf() :
     from os import mkdir, listdir, system, startfile, getcwd
 
@@ -19,6 +19,8 @@ def srhf() :
     import pygame
     pygame.init()
 
+    with open("c:/Users/Public/SRH/SRH.pyw", "r") as fic :
+        version = int(fic.readlines()[0][1:-1])
 
     try :
         # actualise la liste des jeux disponibles en ligne
@@ -46,7 +48,8 @@ def srhf() :
     except urllib.error.URLError : pass
 
     screen = pygame.display.set_mode([600, 600])
-    pygame.display.set_caption("RAPHUB")
+    titre = "SRH - Version "+str(version)
+    pygame.display.set_caption(titre)
 
     Liste_jeux = listdir("c:/Users/Public/SRH/jeux/")
 
@@ -74,3 +77,4 @@ def srhf() :
         pygame.display.flip()
 
     pygame.quit()
+#srhf()
