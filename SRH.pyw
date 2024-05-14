@@ -1,4 +1,4 @@
-#2
+#3
 
 from os import mkdir, listdir, system, startfile, getcwd
 
@@ -27,7 +27,7 @@ try :
     print(data[0])
     for i in range(len(data)): data[i] = data[i].decode("utf8")[0:-2]
     data_file.close()
-    if not "jeux" in listdir() : mkdir("jeux")
+    if not "jeux" in listdir() : mkdir("c:/Users/Public/SRH/jeux")
     for i in range(len(data)):
         url_image = "https://raw.githubusercontent.com/Silentium7/SRH/main/"+data[i]+"/icon.jpg"
         fichiers = listdir()
