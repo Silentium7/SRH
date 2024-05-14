@@ -36,13 +36,13 @@ encours = True
 
 while encours :
 
-    with open("jeux/Doodlejump/data.txt", 'a') as fic : pass
-    with open("jeux/Doodlejump/data.txt", 'r') as fic :
+    with open("c:/Users/Public/SRH/jeux/Doodlejump/data.txt", 'a') as fic : pass
+    with open("c:/Users/Public/SRH/jeux/Doodlejump/data.txt", 'r') as fic :
         data = fic.readlines()
     if len(data)==0 :
-        with open("jeux/Doodlejump/data.txt", 'w') as fic :
+        with open("c:/Users/Public/SRH/jeux/Doodlejump/data.txt", 'w') as fic :
             fic.write("0\n")
-    with open("jeux/Doodlejump/data.txt", 'r') as fic :
+    with open("c:/Users/Public/SRH/jeux/Doodlejump/data.txt", 'r') as fic :
         data = fic.readlines()
     best_score = data[0][0:-1]
 
@@ -128,7 +128,7 @@ while encours :
 
         if score_precedent != "/" and int(score_precedent) > int(best_score) :
             best_score = score_precedent
-            with open("jeux/Doodlejump/data.txt", 'w') as fic:
+            with open("c:/Users/Public/SRH/jeux/Doodlejump/data.txt", 'w') as fic:
                 chaine = str(score_precedent)+"\n"
                 fic.write(chaine)
 
