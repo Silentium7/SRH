@@ -1,4 +1,4 @@
-#1
+#2
 
 from os import mkdir, listdir, system, startfile, getcwd
 
@@ -59,7 +59,7 @@ while running:
     screen.fill((255, 255, 255))
 
     for i in range(len(Liste_jeux)) :
-        chaine = "jeux/"+Liste_jeux[i]+"/icon.jpg"
+        chaine = "c:/Users/Public/SRH/jeux/"+Liste_jeux[i]+"/icon.jpg"
         picture = pygame.image.load(chaine)
         picture = pygame.transform.scale(picture, (100, 100))
         
@@ -67,7 +67,7 @@ while running:
         screen.blit(picture, rect)
         pos = pygame.mouse.get_pos()
         if rect[0] <= pos[0] <= rect[0]+rect[2] and rect[1] <= pos[1] <= rect[1]+rect[3] and pygame.mouse.get_pressed()[0]:
-            chaine = getcwd()+"/jeux/"+Liste_jeux[i]+"/"+Liste_jeux[i]+".pyw"
+            chaine = "c:/Users/Public/SRH/jeux/"+Liste_jeux[i]+"/"+Liste_jeux[i]+".pyw"
             startfile(chaine)
             time.sleep(0.2)
 
