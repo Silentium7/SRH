@@ -1,4 +1,4 @@
-#7
+#9
 def srhf() :
     from os import mkdir, listdir, system, startfile, getcwd
 
@@ -59,7 +59,7 @@ def srhf() :
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
-        screen.fill((0, 0, 20))
+        screen.fill((0, 0, 200))
 
         for i in range(len(Liste_jeux)) :
             chaine = "c:/Users/Public/SRH/jeux/"+Liste_jeux[i]+"/icon.jpg"
