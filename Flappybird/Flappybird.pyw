@@ -100,7 +100,7 @@ title2 = police2.render('Espace pour lancer', False, (0, 0, 50))
 
 clock = pygame.time.Clock()
 screen = pygame.display.set_mode([800, 500])
-path_data = "data.txt"
+path_data = "c:/Users/Public/SRH/jeux/Flappybird/data.txt"
 last_socre = "/"
     
 
